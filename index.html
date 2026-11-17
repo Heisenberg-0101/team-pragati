@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#1c0c49">
+  <title>Sakhi360 — Private AI Companion for Women's Health, Safety & Growth</title>
+  <meta name="description" content="Privacy-first companion for women's body, mind, safety, digital defense, and growth." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="splash" class="splash" role="status" aria-label="Loading Sakhi360">
+    <div class="splash-stars" aria-hidden="true"></div>
+    <div class="splash-inner">
+      <div class="logo-wrap" aria-hidden="true">
+        <span class="logo-ring"></span>
+        <div class="orbit">
+          <span class="badge" style="--a:-77deg"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span>
+          <span class="badge" style="--a:-148deg"><svg viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 5-3 8-7 10-4-2-7-5-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg></span>
+          <span class="badge" style="--a:-5deg"><svg viewBox="0 0 24 24"><path d="M12 21v-9"/><path d="M12 12C12 8 9 6 5 6c0 4 3 6 7 6z"/><path d="M12 14c0-3 2-5 6-5 0 3-2 5-6 5z"/></svg></span>
+          <span class="badge" style="--a:140deg"><svg viewBox="0 0 24 24"><path d="M12 5c-2-2-6-1-6 3 0 1 0 2 1 3-2 1-2 5 1 6 1 2 4 2 4 0z"/><path d="M12 5c2-2 6-1 6 3 0 1 0 2-1 3 2 1 2 5-1 6-1 2-4 2-4 0z"/></svg></span>
+          <span class="badge" style="--a:68deg"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2 4 4 0 0 1 7 2c0 5.5-7 10-7 10z"/><path d="M7 12h3l1.5-2.5 2 4 1.5-1.5h2"/></svg></span>
+        </div>
+        <span class="orb">
+          <svg viewBox="0 0 100 100" class="orb-mark">
+            <path d="M18 8 L50 4 L82 8 L82 50 C82 70 66 86 50 96 C34 86 18 70 18 50 Z" fill="#fff"/>
+            <path d="M50 78 C32 64 22 54 22 42 C22 33 29 27 37 27 C43 27 48 30 50 35 C52 30 57 27 63 27 C71 27 78 33 78 42 C78 54 68 64 50 78 Z" fill="#E8317F"/>
+          </svg>
+        </span>
+      </div>
+      <div class="splash-word">Sakhi<b>360</b></div>
+      <p class="splash-tag">One private app for her health, mind, safety, privacy &amp; growth</p>
+      <div class="splash-bar" aria-hidden="true"><i></i></div>
+      <button type="button" id="splash-skip" class="splash-skip">Tap to skip</button>
+    </div>
+  </div>
+
+
+  <!-- Real app surface: sidebar + workspace + mobile tab bar -->
+  <div id="shell" class="shell medical-canvas">
+    <aside class="sidebar" aria-label="Sidebar">
+      <div class="sidebar-scroll">
+        <button type="button" class="brand" data-nav="overview">
+          <span class="brand-mark" id="brand-icon"></span>
+          <span>
+            <span class="brand-name">Sakhi<b>360</b></span>
+            <span class="brand-sub">Private Health &amp; Safety Portal</span>
+          </span>
+        </button>
+        <nav id="sidebar-nav" class="side-nav" aria-label="Sakhi360 Pillars"></nav>
+      </div>
+      <div class="vault-keys">
+        <div class="vk-head"><strong>Calculator Vault Keys</strong><span>AES-256</span></div>
+        <div class="vk-row"><span>Real Vault</span><b id="vk-real" class="mono"></b></div>
+        <div class="vk-row"><span>Decoy Notes</span><b id="vk-decoy" class="mono"></b></div>
+        <div class="vk-row"><span>Panic Wipe</span><b id="vk-panic" class="mono red"></b></div>
+      </div>
+    </aside>
+
+    <div class="workspace">
+      <header class="topbar">
+        <div class="crumbs">
+          <button type="button" class="mobile-brand" data-nav="overview">Sakhi<b class="grad-text">360</b></button>
+          <div class="crumb-trail">
+            <button type="button" data-nav="overview">Sakhi360</button>
+            <span class="sep" aria-hidden="true">/</span>
+            <span id="crumb-title" class="crumb-title"></span>
+          </div>
+        </div>
+        <button type="button" id="mobile-wiki-btn" class="wiki-chip" data-wiki="pcos"></button>
+      </header>
+
+      <main id="main" class="main"></main>
+    </div>
+
+    <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile Pillar Navigation"></nav>
+  </div>
+
+  <!-- Stealth calculator surface -->
+  <div id="stealth" class="stealth" hidden></div>
+
+  <!-- Decoy notes surface -->
+  <div id="decoy" class="decoy" hidden></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
